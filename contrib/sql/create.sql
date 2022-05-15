@@ -131,8 +131,8 @@ ALTER TABLE ONLY public.expense
 -- Name: expense cashback_fkey; Type: FK CONSTRAINT; Schema: public; Owner: $POSTGRESQL_USER
 --
 
-ALTER TABLE ONLY public.expense
-    ADD CONSTRAINT cashback_fkey FOREIGN KEY (cashback_id) REFERENCES public.cashback(cashback_id) NOT VALID;
+-- ALTER TABLE ONLY public.expense
+--     ADD CONSTRAINT cashback_fkey FOREIGN KEY (cashback_id) REFERENCES public.cashback(cashback_id) NOT VALID;
 
 
 --
