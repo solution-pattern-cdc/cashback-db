@@ -83,6 +83,7 @@ CREATE TABLE public.expense (
     sale_id bigint NOT NULL,
     customer_id bigint NOT NULL,
     amount numeric(8,2) NOT NULL,
+    earned_cashback numeric(8,2),
     date timestamp without time zone NOT NULL,
     cashback_id bigint
 );
@@ -130,8 +131,8 @@ ALTER TABLE ONLY public.expense
 -- Name: expense cashback_fkey; Type: FK CONSTRAINT; Schema: public; Owner: $POSTGRESQL_USER
 --
 
-ALTER TABLE ONLY public.expense
-    ADD CONSTRAINT cashback_fkey FOREIGN KEY (cashback_id) REFERENCES public.cashback(cashback_id) NOT VALID;
+-- ALTER TABLE ONLY public.expense
+--     ADD CONSTRAINT cashback_fkey FOREIGN KEY (cashback_id) REFERENCES public.cashback(cashback_id) NOT VALID;
 
 
 --
